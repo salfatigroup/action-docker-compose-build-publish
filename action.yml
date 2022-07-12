@@ -1,0 +1,20 @@
+name: Build and Publish Docker Compose
+author: Elon Salfati
+description: Build via docker-compose and publish to your registry
+branding:
+  icon: "database"
+  color: "blue"
+inputs:
+  docker_compose_file:
+    description: "Docker Compose file"
+    required: true
+  build_args:
+    description: "Optional. Extend the build args with your own. e.g., foo=bar,baz=qux without any spaces between the key and value. Defaults to empty"
+    required: false
+    default: ""
+outputs:
+  images:
+    description: "The published images"
+runs:
+  using: node16
+  main: lib/index.js
