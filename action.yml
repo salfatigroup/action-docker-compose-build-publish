@@ -12,6 +12,10 @@ inputs:
     description: "Optional. Extend the build args with your own. e.g., foo=bar,baz=qux without any spaces between the key and value. Defaults to empty"
     required: false
     default: ""
+  tags:
+    description: "Optional. Tags to add to the image. e.g., latest,1.0.0 without any spaces between the tags. Defaults to latest"
+    required: false
+    default: "latest"
 outputs:
   images:
     description: "The published images"
